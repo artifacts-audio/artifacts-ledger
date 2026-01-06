@@ -1,0 +1,102 @@
+# Artifacts Registry
+# ===================
+# Canonical record of all Artifacts ever created.
+# 
+# Schema Version: 1.0
+# Last Updated: 2025-01-06
+#
+# This file is the authoritative source for Artifact existence.
+# All entries are append-only. Entries are never deleted, only marked as revoked.
+
+schema_version: "1.0"
+
+# Registry metadata
+metadata:
+  maintainer: "Artifacts Audio"
+  contact: "registry@artifacts.audio"
+  verification_key: "https://artifacts.audio/keys/release-signing.asc"
+  ledger_repo: "https://github.com/artifacts-audio/artifacts-ledger"
+
+# Artifact entries
+artifacts:
+
+  # ============================================================================
+  # AA-000001: Genesis
+  # ============================================================================
+  - id: "AA-000001"
+    slug: "genesis"
+    title: "Genesis"
+    description: "The first Artifact. Proof of concept and origin point for the entire system."
+    status: "pending"  # pending | active | retired | revoked
+    
+    # Evolution
+    stage: null  # Not yet released
+    stage_history: []
+    
+    # Supply
+    supply:
+      type: "limited"
+      total: 1
+      claimed: 0
+    
+    # Attribution
+    creator: "Artifacts Audio"
+    creator_url: "https://artifacts.audio"
+    
+    # Dates
+    first_seen: null  # Not yet released
+    last_updated: "2025-01-06"
+    
+    # References
+    canonical_page: "/registry/artifacts/genesis"
+    documentation: "/concepts/what-is-an-artifact"
+    
+    # Releases (empty until first release)
+    releases: []
+    
+    # Policies
+    transfer_policy: "non-transferable"
+    combust_policy: "standard"  # standard | restricted | disabled
+    
+    # Notes
+    notes: |
+      The Genesis Artifact is a singular creation — one of one, never to be repeated.
+      It exists as proof that the system works and as the anchor point for all
+      Artifacts that follow.
+      
+      Genesis will be released when the infrastructure is fully operational.
+      Its release will be announced in this ledger.
+
+# ============================================================================
+# Template for future entries (copy and modify)
+# ============================================================================
+# - id: "AA-NNNNNN"
+#   slug: "artifact-slug"
+#   title: "Artifact Title"
+#   description: "Brief description of the Artifact."
+#   status: "active"
+#   stage: "spark"
+#   stage_history:
+#     - stage: "spark"
+#       date: "YYYY-MM-DD"
+#       combustor: null  # or user identifier for community combusts
+#   supply:
+#     type: "limited"  # or "unlimited"
+#     total: 100       # omit for unlimited
+#     claimed: 0
+#   creator: "Creator Name"
+#   creator_url: "https://..."
+#   first_seen: "YYYY-MM-DD"
+#   last_updated: "YYYY-MM-DD"
+#   canonical_page: "/registry/artifacts/slug"
+#   documentation: "/..."
+#   releases:
+#     - version: "1.0.0"
+#       date: "YYYY-MM-DD"
+#       sha256: "checksum..."
+#       signature: "https://..."
+#       notes: "Release notes"
+#   transfer_policy: "transferable"
+#   combust_policy: "standard"
+#   notes: |
+#     Additional notes about the Artifact.

@@ -40,6 +40,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - tables
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
 
@@ -51,18 +53,24 @@ nav:
     - Scarcity & Evolution: concepts/scarcity-and-evolution.md
     - The Combust Mechanism: concepts/combust.md
     - Cryptographic Integrity: concepts/cryptographic-integrity.md
-  - Guides:
-    - Getting Started: guides/index.md
-    - Installing Forge: guides/installing-forge.md
-    - Creating Your First Artifact: guides/first-artifact.md
-    - Publishing & Distribution: guides/publishing.md
+  - Manual:
+    - Overview: manual/index.md
+    - Installation: manual/installation.md
+    - Authorization: manual/authorization.md
+    - Updates: manual/updates.md
+    - Troubleshooting: manual/troubleshooting.md
   - Registry:
     - Artifact Catalog: registry/index.md
-  - Manifests:
-    - Release History: manifests/index.md
+  - Releases:
+    - Release History: releases/index.md
+  - Lore:
+    - Overview: lore/index.md
+    - Canon: lore/canon.md
+    - Field Notes: lore/field-notes.md
   - Policies:
-    - Integrity Policy: policies/integrity.md
-    - Authenticity Rules: policies/authenticity.md
+    - Integrity: policies/integrity.md
+    - Transparency: policies/transparency.md
+    - Authenticity: policies/authenticity.md
     - Governance: policies/governance.md
 
 extra:
